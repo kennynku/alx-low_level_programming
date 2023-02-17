@@ -6,14 +6,22 @@
  */
 int main(void)
 {
-	int alp;
+	char k;
 
-	for 
-		(alp = 'a'; alp <= 'z'; alp++);
-	                putchar(alp);
-	for 
-		(alp = 'A'; alp <= 'Z'; alp++);
-                	putchar(alp);
+	char m;
+
+	k = 'a';
+	m = 'A';
+	while 
+		(k <= 'z') {
+			putchar(k);
+			k++;
+		}
+	while 
+		(m <= 'Z') {
+			putchar(m);
+			m++;
+		}
 	putchar('\n');
 	return (0);
 
