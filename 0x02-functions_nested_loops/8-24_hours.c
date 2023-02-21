@@ -7,21 +7,16 @@ void jack_bauer(void)
 {
 	int a, b;
 
-	a = 0;
-
-	while (a < 24)
+	for (a = 0; a <= 23; a++)
 	{
-		b = 0;
-		while (b < 60)
+		for (b = 0; b <= 59; b++)
 		{
 			_putchar((a / 10) + '0');
 			_putchar((a % 10) + '0');
-			_putchar('.');
+			_putchar(':');
 			_putchar((b / 10) + '0');
 			_putchar((b % 10) + '0');
 			_putchar('\n');
-			b++;
 		}
-		a++;
 	}
 }
