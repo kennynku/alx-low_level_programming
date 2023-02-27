@@ -7,7 +7,7 @@
  */
 void puts_half(char *str)
 {
-	in index = 0, len = 0, n;
+	int index = 0, len = 0, n;
 
 	while (str[index++])
 		len++;
