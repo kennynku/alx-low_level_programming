@@ -1,15 +1,28 @@
 #include "main.h"
-#include <string.h>
 
 /**
  * _strncat - cancatenating two strings
  * @dest: String to be inputed
  * @src: String to be inputed
  * @n: Number of bytes from src to be inputed in dest
- * @Return: string
+ * Return: dest
  */
 char *_strncat(char *dest, char *src, int n)
 {
-	strncat(dest, src, n)
+	int a, b;
+
+	a = 0;
+	while (dest[a] != '\0')
+	{
+		a++;
+	}
+	b = 0;
+	while (b < n && src[b] != '\0')
+	{
+		dest[a] = src[b];
+		a++;
+		b++;
+	}
+	dest[a] = '\0';
 	return (dest);
 }
