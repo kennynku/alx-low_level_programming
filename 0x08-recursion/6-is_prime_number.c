@@ -11,7 +11,7 @@ int primenumber(int n, int k)
 	if (k == 1)
 		return (1);
 
-	if (n % m == 0)
+	if (n % k == 0)
 		return (0);
 
 	return (primenumber(n, k - 1));
