@@ -3,7 +3,7 @@
 /**
  * wildcmp - compares two strings
  * @s1: frist string
- * @s2: second string
+ * @s2: second string containing '*' or not
  * Return: if string 1 else 0
  */
 int wildcmp(char *s1, char *s2)
