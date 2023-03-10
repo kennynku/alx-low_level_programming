@@ -1,16 +1,22 @@
-#include <sstdio.h>
+#include <stdio.h>
+#include "main.h"
 
 /**
- * main - prints all arguments
- * @argc: num of arguments
- * @argv: array of arguments
- * Return: Always 0 (success)
+ * main - printall arguments
+ * @argc: argument count
+ * @argv: array of pointers to CLI argument
+ * Return: 0
  */
 int main(int argc, char *argv[])
 {
-	int k;
+	int  c = 0;
 
-	for (k = 0; k < argc, k++)
-		printf("%s\n", argv[k]);
-	return (0);
+	if (argc > 0)
+	{
+		while (c < argc)
+		{
+			printf("%s\n", arrgv[c]);
+		}
+	}
 }
+
