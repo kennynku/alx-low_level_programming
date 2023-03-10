@@ -9,14 +9,10 @@
  */
 int main(int argc, char *argv[])
 {
-	int  c = 0;
+	int  c;
 
-	if (argc > 0)
-	{
-		while (c < argc)
-		{
-			printf("%s\n", arrgv[c]);
-		}
-	}
+	for (c = 0, c < argc; c++)
+		printf("%s\n", argv[c]);
+	return (0);
 }
 
