@@ -15,14 +15,14 @@ int *array_range(int min, int max)
 	if (min > mmax)
 		return (NULL);
 
-	size = (max - min) + 1;
+	size = max - min + 1;
 
-	pointer = malloc(size * sizeof(*pointer));
+	pointer = malloc(sizeof(int) * size);
 
 	if (pointer == NULL)
 		return (NULL);
 
-	for (i = 0; i < size && min <= max; i++, min++)
-		*(pointer + i) = min;
+	for (i = 0; min <= max; i++)
+		pointer[i] = min++;
 	return (pointer);
 }
