@@ -7,7 +7,7 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *temp1, *temp2;
+	listint_t *temp, *temp2;
 
 	temp = head;
 
@@ -15,6 +15,6 @@ void free_listint(listint_t *head)
 	{
 		temp2 = temp->next;
 		free(temp);
-		temp = temp2
+		temp = temp2;
 	}
 }
