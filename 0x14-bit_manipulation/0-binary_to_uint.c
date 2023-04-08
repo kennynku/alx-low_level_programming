@@ -1,10 +1,13 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
- * binary_to_uint - function that converts a binary num to unsigned int
+ * binary_to_uint - Function
+ *
+ * Description: converts a binary number to an unsigned int.
+ *
  * @b: pointer of type unsigned int
- * Return: converted num or 0 if it fails
+ *
+ * Return: returns converted number or 0 if fails.
  */
 unsigned int binary_to_uint(const char *b)
 {
@@ -12,7 +15,6 @@ unsigned int binary_to_uint(const char *b)
 
 	if (b == NULL)
 		return (0);
-
 	for (; *(b + k); k++)
 	{
 		n = n << 1;
@@ -23,3 +25,4 @@ unsigned int binary_to_uint(const char *b)
 	}
 	return (n);
 }
+
