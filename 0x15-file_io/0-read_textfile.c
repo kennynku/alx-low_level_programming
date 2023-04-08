@@ -1,25 +1,27 @@
 #include "main.h"
 #include <string.h>
 
+
 /**
- * read_textfile - Function that reads a text file and prints POSIX std output
- * @filename: text file to read
- * @letters: num of letters to be read
- * Return: w - actual um of bytes read and printed
- * 0 when function fails or filename is NULL
+ * read_textfile - reads the content of the file
+ * @filename: name of the file
+ * @letters: number of letters to be printed
+ *
+ * Return: always 0 success
  */
+
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int k;
-	ssize_t fd, fw;
+	int x;
+	ssize_t frd, fwr;
 	char *out;
 
 	if (!filename)
 		return (0);
 
-	k = open(filename, O_RDONLY);
+	x = open(filename, O_RDONLY);
 
-	if (k == -1)
+	if (x == -1)
 		return (0);
 
 	out = malloc(sizeof(char) * (letters));
@@ -27,16 +29,13 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (!out)
 		return (0);
 
-	fd = read(k, out, letters);
-
-	if (fd == -1)
+	frd = read(x, out, letters);
+	if (frd == -1)
 		return (0);
-
-	fw = write(STDOUT_FILENO, out, fd);
+	fwr = write(STDOUT_FILENO, out, frd);
 
 	free(out);
+	close(x);
 
-	close(k);
-
-	return (fw);
+	return (fwr);
 }
